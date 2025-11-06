@@ -34,14 +34,14 @@ public class DatabaseManager {
                     "z_pos REAL NOT NULL," +
                     "yaw REAL NOT NULL," +
                     "pitch REAL NOT NULL," +
-                    "created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL"
+                    "created_at INTEGER NOT NULL"
                     + ");");
         }
     }
 
     public void logPlayer(Player player) {
         try (PreparedStatement statement = connection.prepareStatement(
-                "INSERT INTO are_you_playing (uuid, username, x_pos, y_pos, z_pos, yaw, pitch) VALUES (?, ?, ?, ?, ?, ?, ?)")) {
+                "INSERT INTO are_you_playing (uuid, username, x_pos, y_pos, z_pos, yaw, pitch, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)")) {
             Location location = player.getLocation();
             statement.setString(1, player.getUniqueId().toString());
             statement.setString(2, player.getName());
@@ -50,6 +50,7 @@ public class DatabaseManager {
             statement.setDouble(5, location.getZ());
             statement.setFloat(6, location.getYaw());
             statement.setFloat(7, location.getPitch());
+            statement.setLong(8, System.currentTimeMillis() / 1000L);
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
