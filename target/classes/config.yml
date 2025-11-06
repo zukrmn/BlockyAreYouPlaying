@@ -1,0 +1,2 @@
+# Intervalo em segundos para verificar se os jogadores estao online
+check_interval: 60
