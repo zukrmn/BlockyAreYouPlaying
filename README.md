@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS are_you_playing (
     z_pos REAL NOT NULL,
     yaw REAL NOT NULL,
     pitch REAL NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+    created_at INTEGER NOT NULL
 );
 ```
 
