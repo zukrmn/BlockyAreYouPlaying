@@ -1,5 +1,0 @@
-name: BlockyAreYouPlaying
-main: com.blockycraft.blockyareyouplaying.BlockyAreYouPlaying
-version: 1.0
-author: BlockyCraft
-depend: [AuthPlugin]
