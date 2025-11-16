@@ -1,11 +1,11 @@
 # BlockyAreYouPlaying
 
-BlockyAreYouPlaying é um plugin para o servidor BlockyCRAFT que monitora a atividade dos jogadores, registrando periodicamente informações sobre os jogadores que estão online e autenticados através do `AuthPlugin`.
+BlockyAreYouPlaying é um plugin para o servidor BlockyCRAFT que monitora a atividade dos jogadores, registrando periodicamente informações sobre os jogadores que estão online e autenticados através do `BlockyAuth`.
 
 ## Funcionalidades
 
 - **Monitoramento Periódico:** Executa uma verificação em intervalos configuráveis para registrar a atividade dos jogadores.
-- **Integração com AuthPlugin:** Verifica se um jogador está autenticado usando o método `isAuthenticated()` do `AuthPlugin` antes de registrar seus dados.
+- **Integração com BlockyAuth:** Verifica se um jogador está autenticado usando o método `isAuthenticated()` do `BlockyAuth` antes de registrar seus dados.
 - **Registro de Dados:** Armazena informações detalhadas sobre os jogadores autenticados, incluindo UUID, nome de usuário, coordenadas (X, Y, Z), e rotação (Yaw, Pitch) em um banco de dados SQLite.
 - **Configuração Flexível:** O intervalo de verificação pode ser facilmente ajustado no arquivo `config.yml`.
 
@@ -42,7 +42,7 @@ check_interval: 60
 
 ## Integração
 
-- **AuthPlugin:** O BlockyAreYouPlaying depende do `AuthPlugin` para verificar o status de autenticação dos jogadores. Certifique-se de que o `AuthPlugin` esteja instalado e funcionando corretamente.
+- **BlockyAuth:** O BlockyAreYouPlaying depende do `BlockyAuth` para verificar o status de autenticação dos jogadores. Certifique-se de que o `BlockyAuth` esteja instalado e funcionando corretamente.
 
 ## Comandos e Permissões
 
