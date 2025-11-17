@@ -34,11 +34,11 @@
             <systemPath>${minecraft.server.path}/server.jar</systemPath>
         </dependency>
         <dependency>
-            <groupId>com.blockycraft</groupId>
-            <artifactId>AuthPlugin</artifactId>
+            <groupId>com.blockycraft.blockyauth</groupId>
+            <artifactId>BlockyAuth</artifactId>
             <version>1.0</version>
             <scope>system</scope>
-            <systemPath>${minecraft.server.path}/plugins/AuthPlugin.jar</systemPath>
+            <systemPath>${minecraft.server.path}/plugins/BlockyAuth.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.xerial</groupId>
